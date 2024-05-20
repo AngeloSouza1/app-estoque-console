@@ -1,7 +1,8 @@
 require 'terminal-table'
 
 def listar_produtos(produtos)
-  mensagem_amarelo("==== Lista de produtos... ====", false, false, 1)
+  limpar_tela
+    mensagem_amarelo("==== Lista de produtos... ====", false, false, 1)
   # Criar tabela
   table = Terminal::Table.new do |t|
     t.headings = ['ID', 'Nome', 'Descrição', 'Preço', 'Quantidade']
@@ -11,4 +12,7 @@ def listar_produtos(produtos)
     end
   end
   puts table
+  mensagem_amarelo("Digite enter para continuar ...",false,false)
+  gets
+  limpar_tela
 end

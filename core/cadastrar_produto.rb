@@ -1,5 +1,5 @@
 def cadastrar_produto(produtos)
-  mensagem("Iniciando castradro de produto...",true, true, 1)
+  mensagem("Iniciando cadastro de produto...",true, true, 1)
 
   mensagem_azul("Digite o nome do produto: ",false,false)
   nome = gets.chomp
@@ -24,5 +24,7 @@ def cadastrar_produto(produtos)
     preco: preco,
     quantidade: quantidade_estoque
   }
+
+  mensagem("O produto: #{amarelo(nome)} foi cadastrado com sucesso !",true,true,2)
 
 end
