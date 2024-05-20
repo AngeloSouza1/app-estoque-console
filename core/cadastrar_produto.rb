@@ -1,4 +1,4 @@
-def cadastro_produto(produtos)
+def cadastrar_produto(produtos)
   mensagem("Iniciando castradro de produto...",true, true, 1)
 
   mensagem_azul("Digite o nome do produto: ",false,false)

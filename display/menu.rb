@@ -1,3 +1,4 @@
+
 def iniciar_menu(produtos = [])
 
   loop do
@@ -12,9 +13,9 @@ def iniciar_menu(produtos = [])
 
     case opcao
     when 1
-      cadastro_produto(produtos)
+      cadastrar_produto(produtos)
     when 2
-      mensagem "Lista"
+      listar_produtos(produtos)
     when 3
       mensagem "retirada"
     when 4
