@@ -1,14 +1,14 @@
 require 'terminal-table'
 
-def retirar_estoque(produtos)
+def retirar_estoque
   limpar_tela
   mensagem_amarelo("==== Escolha um dos produtos abaixo ====", false, false, 1)
   # Criar tabela
   table = Terminal::Table.new do |t|
     t.headings = ['ID', 'Nome', 'Quantidade']
-    produtos.each do |row|
+    ProdutoServico.todos.each do |produto|
 
-      t.add_row([row[:id], row[:nome], row[:quantidade]])
+      t.add_row(produto.id, produto.nome, produto.quantidade)
     end
   end
   puts table
@@ -35,5 +35,5 @@ def retirar_estoque(produtos)
     produto[:quantidade] = produto[:quantidade] - quantidade_retirada
 
     mensagem_verde("Retirada realizada com sucesso", true, true, 3)
-    listar_produtos(produtos)
+    listar_produtos
 end

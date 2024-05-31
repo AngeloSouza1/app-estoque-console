@@ -17,13 +17,15 @@ def cadastrar_produto(produtos)
   quantidade_estoque  = gets.to_i
   limpar_tela
 
-  produtos << {
+  p = Produto.new {
     id: Time.now.to_i,
     nome: nome,
     descricao: descricao,
     preco: preco,
     quantidade: quantidade_estoque
   }
+
+  ProdutoServico.adicionar(p)
 
   mensagem("O produto: #{amarelo(nome)} foi cadastrado com sucesso !",true,true,2)
 
