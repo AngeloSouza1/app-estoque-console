@@ -1,4 +1,4 @@
-def cadastrar_produto(produtos)
+def cadastrar_produto
   mensagem("Iniciando cadastro de produto...",true, true, 1)
 
   mensagem_azul("Digite o nome do produto: ",false,false)
@@ -17,13 +17,13 @@ def cadastrar_produto(produtos)
   quantidade_estoque  = gets.to_i
   limpar_tela
 
-  p = Produto.new {
-    id: Time.now.to_i,
+  p = Produto.new ({
+    id:  Time.now.to_i,
     nome: nome,
     descricao: descricao,
     preco: preco,
     quantidade: quantidade_estoque
-  }
+  })
 
   ProdutoServico.adicionar(p)
 

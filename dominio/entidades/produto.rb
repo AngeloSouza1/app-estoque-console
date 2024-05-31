@@ -7,5 +7,5 @@ class Produto # classe Anêmica
     self.quantidade = produto_hash[:quantidade]
 
   end
-  attr_accessor  :id:, :nome, :descricao, :preco,  :quantidade
+  attr_accessor  :id, :nome, :descricao, :preco,  :quantidade
 end
