@@ -24,9 +24,10 @@ def cadastrar_produto
     "preco" => preco,
     "quantidade" => quantidade_estoque
   })
-
-  ProdutoServico.adicionar(p)
-
+  # driver json
+  ProdutoServico.new(JsonRepositorio,"db/produtos.json").adicionar(p)
+  # driver csv
+  # ProdutoServico.new(CsvRepositorio,"db/produtos.csv").adicionar(p)
   mensagem("O produto: #{amarelo(nome)} foi cadastrado com sucesso !",true,true,2)
 
 end
