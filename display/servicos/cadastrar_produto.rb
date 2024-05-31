@@ -17,12 +17,12 @@ def cadastrar_produto
   quantidade_estoque  = gets.to_i
   limpar_tela
 
-  p = Produto.new ({
-    id:  Time.now.to_i,
-    nome: nome,
-    descricao: descricao,
-    preco: preco,
-    quantidade: quantidade_estoque
+  p = Produto.new({
+    "id" =>  Time.now.to_i,
+    "nome" => nome,
+    "descricao" => descricao,
+    "preco" => preco,
+    "quantidade" => quantidade_estoque
   })
 
   ProdutoServico.adicionar(p)
